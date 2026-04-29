@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone転売 完全ガイド｜1台+2万円の利益を狙う実践方法</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans JP',sans-serif; background:#f5f5f0; color:#1a1a1a; padding:40px 20px; }
+
+  /* ===== ページ共通 ===== */
+  .page { max-width:760px; margin:0 auto 80px; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.08); }
+  .page-header { padding:36px 40px 28px; }
+  .page-content { padding:0 40px 40px; }
+
+  .badge { display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.12em; padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+  .page-title { font-family:'Noto Serif JP',serif; font-size:28px; font-weight:700; line-height:1.4; margin-bottom:8px; }
+  .page-subtitle { font-size:14px; line-height:1.7; }
+
+  .section { margin-bottom:36px; }
+  .section-label { font-size:11px; font-weight:700; letter-spacing:0.1em; margin-bottom:6px; }
+  .section h2 { font-size:20px; font-weight:700; margin-bottom:14px; line-height:1.4; }
+  .body-text { font-size:14px; color:#444; line-height:1.8; margin-bottom:12px; }
+
+  .divider { border:none; border-top:2px dashed #e0e0e0; margin:36px 0; }
+
+  /* カード */
+  .card { border-radius:12px; padding:18px 20px; margin-bottom:12px; }
+  .card-grid { display:grid; gap:12px; margin-top:14px; }
+  .card-grid-2 { grid-template-columns:1fr 1fr; }
+  .card-grid-3 { grid-template-columns:1fr 1fr 1fr; }
+  .card-grid-4 { grid-template-columns:1fr 1fr 1fr 1fr; }
+
+  /* フロー */
+  .flow-row { display:flex; align-items:center; gap:10px; margin:16px 0; flex-wrap:wrap; }
+  .flow-box { flex:1; min-width:90px; border-radius:10px; padding:12px 14px; text-align:center; }
+  .flow-box .fl-label { font-size:10px; font-weight:700; letter-spacing:0.08em; margin-bottom:4px; }
+  .flow-box .fl-val { font-size:13px; font-weight:700; line-height:1.4; }
+  .flow-arrow { font-size:20px; color:#999; flex-shrink:0; }
+
+  /* ステップ */
+  .step-list { display:flex; flex-direction:column; gap:12px; margin-top:14px; }
+  .step-item { display:flex; gap:14px; align-items:flex-start; }
+  .step-num { width:28px; height:28px; min-width:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; margin-top:2px; }
+  .step-content .step-title { font-size:14px; font-weight:700; margin-bottom:4px; }
+  .step-content .step-desc { font-size:13px; color:#555; line-height:1.7; }
+
+  /* 計算表 */
+  .calc-table { width:100%; border-radius:12px; overflow:hidden; margin-top:14px; }
+  .calc-row { display:flex; justify-content:space-between; align-items:center; padding:11px 18px; font-size:14px; }
+  .calc-row:nth-child(odd) { background:#f8f8f5; }
+  .calc-total { font-weight:700; font-size:17px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; }
+
+  /* まとめボックス */
+  .summary-box { border-radius:14px; padding:24px 28px; margin-top:28px; }
+
+  /* テーブル */
+  table { width:100%; border-collapse:collapse; font-size:13px; margin-top:12px; }
+  th { padding:10px 14px; text-align:left; font-weight:700; font-size:12px; }
+  td { padding:9px 14px; border-top:1px solid #eee; vertical-align:middle; }
+
+  /* ユーティリティ */
+  .bg-red-light    { background:#fef2f2; border:1px solid #fecaca; }
+  .bg-green-light  { background:#f0fdf4; border:1px solid #bbf7d0; }
+  .bg-yellow-light { background:#fefce8; border:1px solid #fde047; }
+  .text-red   { color:#dc2626; }
+  .text-green { color:#16a34a; }
+  .emoji-large { font-size:28px; display:block; margin-bottom:8px; }
+  .tag { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:4px; margin-right:4px; }
+
+  /* ヒーローバナー */
+  .hero-banner { border-radius:14px; padding:28px 24px; margin:24px 0; display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+  .hero-num { text-align:center; flex:1; min-width:120px; }
+  .hero-num .hn-label { font-size:11px; font-weight:700; letter-spacing:0.1em; margin-bottom:6px; opacity:.75; }
+  .hero-num .hn-val { font-size:36px; font-weight:700; line-height:1.1; }
+  .hero-num .hn-sub { font-size:12px; margin-top:4px; opacity:.7; }
+  .hero-sep { width:1px; height:60px; background:rgba(255,255,255,0.25); flex-shrink:0; }
+
+  /* ステータスピル */
+  .pill { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; margin-right:4px; margin-bottom:4px; }
+
+  /* 期間タイムライン */
+  .timeline { display:flex; gap:0; margin-top:14px; border-radius:12px; overflow:hidden; }
+  .tl-seg { flex:1; padding:14px 12px; text-align:center; }
+  .tl-seg .tl-month { font-size:12px; font-weight:700; margin-bottom:6px; }
+  .tl-seg .tl-status { font-size:11px; font-weight:700; }
+
+  /* 選択肢ランキング */
+  .rank-item { display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:12px; margin-bottom:10px; }
+  .rank-badge { width:36px; height:36px; min-width:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; }
+  .rank-content .rank-title { font-size:14px; font-weight:700; margin-bottom:3px; }
+  .rank-content .rank-desc { font-size:12px; color:#555; line-height:1.6; }
+
+  /* 対策カード */
+  .taisaku-card { border-radius:12px; padding:18px 20px; margin-bottom:12px; border-left:5px solid; }
+
+  /* 危険カード */
+  .danger-card { border-radius:12px; padding:20px 24px; margin-bottom:12px; }
+
+  @media print { .page { box-shadow:none; margin-bottom:0; page-break-after:always; } }
+  @media (max-width:600px) {
+    .page-content { padding:0 20px 32px; }
+    .page-header  { padding:28px 20px 20px; }
+    .card-grid-2,.card-grid-3,.card-grid-4 { grid-template-columns:1fr 1fr; }
+    .timeline { flex-direction:column; }
+    .hero-banner { flex-direction:column; gap:12px; }
+    .hero-sep { width:80%; height:1px; }
+  }
+
+  /* ===== テーマ: スレート（表紙 ＋ 第1・2章） ===== */
+  .theme-slate .page-header { background:linear-gradient(135deg,#0f172a 0%,#1e293b 55%,#334155 100%); color:#fff; }
+  .theme-slate .badge { background:rgba(255,255,255,0.18); color:#fff; }
+  .theme-slate .page-title { color:#fff; }
+  .theme-slate .page-subtitle { color:rgba(255,255,255,0.78); }
+  .theme-slate .section-label { color:#475569; }
+  .theme-slate .section h2 { color:#0f172a; }
+  .theme-slate .flow-box { background:#f1f5f9; }
+  .theme-slate .flow-box .fl-label { color:#475569; }
+  .theme-slate .flow-box .fl-val { color:#0f172a; }
+  .theme-slate .step-num { background:#334155; color:#fff; }
+  .theme-slate .card { background:#f8fafc; border:1px solid #cbd5e1; }
+  .theme-slate .card.featured { background:#e2e8f0; border:2px solid #334155; }
+  .theme-slate .calc-total { background:#0f172a; color:#fff; }
+  .theme-slate .summary-box { background:#f8fafc; border:2px solid #cbd5e1; }
+  .theme-slate .hero-banner { background:linear-gradient(135deg,#1e293b,#334155); color:#fff; }
+  .theme-slate th { background:#0f172a; color:#fff; }
+  .theme-slate tr:nth-child(even) td { background:#f8fafc; }
+
+  /* ===== テーマ: ブルー（第3章） ===== */
+  .theme-blue .page-header { background:linear-gradient(135deg,#1e3a5f 0%,#2563a8 100%); color:#fff; }
+  .theme-blue .badge { background:rgba(255,255,255,0.2); color:#fff; }
+  .theme-blue .page-title { color:#fff; }
+  .theme-blue .page-subtitle { color:rgba(255,255,255,0.78); }
+  .theme-blue .section-label { color:#2563a8; }
+  .theme-blue .section h2 { color:#1e3a5f; }
+  .theme-blue .flow-box { background:#eff6ff; }
+  .theme-blue .flow-box .fl-label { color:#2563a8; }
+  .theme-blue .flow-box .fl-val { color:#1e3a5f; }
+  .theme-blue .step-num { background:#2563a8; color:#fff; }
+  .theme-blue .card { background:#f0f7ff; border:1px solid #bfdbfe; }
+  .theme-blue .card.featured { background:#dbeafe; border:2px solid #2563a8; }
+  .theme-blue .calc-total { background:#1e3a5f; color:#fff; }
+  .theme-blue .summary-box { background:#eff6ff; border:2px solid #bfdbfe; }
+  .theme-blue .hero-banner { background:linear-gradient(135deg,#1e3a5f,#2563a8); color:#fff; }
+  .theme-blue th { background:#1e3a5f; color:#fff; }
+  .theme-blue tr:nth-child(even) td { background:#f0f7ff; }
+
+  /* ===== テーマ: オレンジ（第4・5章） ===== */
+  .theme-orange .page-header { background:linear-gradient(135deg,#7c2d12 0%,#ea580c 100%); color:#fff; }
+  .theme-orange .badge { background:rgba(255,255,255,0.2); color:#fff; }
+  .theme-orange .page-title { color:#fff; }
+  .theme-orange .page-subtitle { color:rgba(255,255,255,0.78); }
+  .theme-orange .section-label { color:#ea580c; }
+  .theme-orange .section h2 { color:#7c2d12; }
+  .theme-orange .flow-box { background:#fff7ed; }
+  .theme-orange .flow-box .fl-label { color:#ea580c; }
+  .theme-orange .flow-box .fl-val { color:#7c2d12; }
+  .theme-orange .step-num { background:#ea580c; color:#fff; }
+  .theme-orange .card { background:#fff7ed; border:1px solid #fed7aa; }
+  .theme-orange .card.featured { background:#ffedd5; border:2px solid #ea580c; }
+  .theme-orange .calc-total { background:#7c2d12; color:#fff; }
+  .theme-orange .summary-box { background:#fff7ed; border:2px solid #fed7aa; }
+  .theme-orange .hero-banner { background:linear-gradient(135deg,#7c2d12,#ea580c); color:#fff; }
+
+  /* ===== テーマ: グリーン（第6・7章） ===== */
+  .theme-green .page-header { background:linear-gradient(135deg,#14532d 0%,#16a34a 100%); color:#fff; }
+  .theme-green .badge { background:rgba(255,255,255,0.2); color:#fff; }
+  .theme-green .page-title { color:#fff; }
+  .theme-green .page-subtitle { color:rgba(255,255,255,0.78); }
+  .theme-green .section-label { color:#16a34a; }
+  .theme-green .section h2 { color:#14532d; }
+  .theme-green .flow-box { background:#f0fdf4; }
+  .theme-green .flow-box .fl-label { color:#16a34a; }
+  .theme-green .flow-box .fl-val { color:#14532d; }
+  .theme-green .step-num { background:#16a34a; color:#fff; }
+  .theme-green .card { background:#f0fdf4; border:1px solid #bbf7d0; }
+  .theme-green .card.featured { background:#dcfce7; border:2px solid #16a34a; }
+  .theme-green .calc-total { background:#14532d; color:#fff; }
+  .theme-green .summary-box { background:#f0fdf4; border:2px solid #bbf7d0; }
+  .theme-green .hero-banner { background:linear-gradient(135deg,#14532d,#16a34a); color:#fff; }
+
+  /* ===== テーマ: ゴールド（第8章・全体まとめ） ===== */
+  .theme-gold .page-header { background:linear-gradient(135deg,#451a03 0%,#b45309 100%); color:#fff; }
+  .theme-gold .badge { background:rgba(255,255,255,0.2); color:#fff; }
+  .theme-gold .page-title { color:#fff; }
+  .theme-gold .page-subtitle { color:rgba(255,255,255,0.78); }
+  .theme-gold .section-label { color:#b45309; }
+  .theme-gold .section h2 { color:#451a03; }
+  .theme-gold .flow-box { background:#fffbeb; }
+  .theme-gold .flow-box .fl-label { color:#b45309; }
+  .theme-gold .flow-box .fl-val { color:#451a03; }
+  .theme-gold .step-num { background:#b45309; color:#fff; }
+  .theme-gold .card { background:#fffbeb; border:1px solid #fde68a; }
+  .theme-gold .card.featured { background:#fef3c7; border:2px solid #b45309; }
+  .theme-gold .calc-total { background:#451a03; color:#fff; }
+  .theme-gold .summary-box { background:#fffbeb; border:2px solid #fde68a; }
+  .theme-gold .hero-banner { background:linear-gradient(135deg,#451a03,#b45309); color:#fff; }
+</style>
+</head>
+<body>
+
+
+<!-- =====================================================
+  ページ①  表紙 ＋ 第1章「基本」＋ 第2章「転売期間」
+====================================================== -->
+<div class="page theme-slate">
+  <div class="page-header">
+    <span class="badge">🍎 iPHONE RESELL GUIDE — 2026 完全版</span>
+    <h1 class="page-title">iPhone転売<br>完全ガイド</h1>
+    <p class="page-subtitle">📦 Apple Storeで定価購入して買取屋でプレ値売却。<strong style="color:#fff;">1台あたり+2万円前後の利益</strong>を狙える副業の全手順を全8章で徹底解説します。</p>
+  </div>
+  <div class="page-content">
+
+    <!-- ヒーローバナー -->
+    <div class="hero-banner">
+      <div class="hero-num">
+        <div class="hn-label">🍎 1台あたりの利益目安</div>
+        <div class="hn-val">＋2万円</div>
+        <div class="hn-sub">Pro Max 256GB例</div>
+      </div>
+      <div class="hero-sep"></div>
+      <div class="hero-num">
+        <div class="hn-label">💰 1シーズンで狙える利益</div>
+        <div class="hn-val">年収級</div>
+        <div class="hn-sub">台数と台数を重ねれば</div>
+      </div>
+      <div class="hero-sep"></div>
+      <div class="hero-num">
+        <div class="hn-label">📋 この資料の章数</div>
+        <div class="hn-val">全8章</div>
+        <div class="hn-sub">基本から応用まで網羅</div>
+      </div>
+    </div>
+
+    <!-- 第1章 -->
+    <div class="section">
+      <div class="section-label">📖 第1章｜01 BASIC</div>
+      <h2>🍎 仕組みはたったこれだけ</h2>
+      <p class="body-text">Apple Storeで<strong>定価購入</strong>し、買取屋で<strong>プレ値（定価より高い価格）で売却</strong>するだけです。難しい知識はいりません。手順さえ守れば誰でも再現できます。</p>
+
+      <div class="calc-table">
+        <div class="calc-row"><span>🏬 Apple Store定価（iPhone 17 Pro Max 256GB）</span><span style="font-weight:700;">¥194,800</span></div>
+        <div class="calc-row"><span>🏷️ 買取屋の買取金額</span><span class="text-green" style="font-weight:700;">¥218,500</span></div>
+        <div class="calc-total" style="background:#0f172a;color:#fff;">
+          <span>🎉 差額（利益）</span>
+          <span style="color:#6ee7b7;font-size:20px;">＋ ¥23,700</span>
+        </div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:5px;text-align:right;">※ 2025年4月17日時点の価格例</p>
+
+      <div class="card featured" style="margin-top:14px;">
+        <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:8px;">🌏 なぜ買取屋はプレ値で買えるのか？</div>
+        <p style="font-size:13px;color:#444;line-height:1.8;"><strong>日本のiPhoneは世界で2番目に安い</strong>水準に設定されています。買取屋は<strong>ドバイや香港経由で需要の高い国へ輸出</strong>しています。海外輸出なら<strong>消費税10%の還付</strong>が受けられるため、一見トントンに見える取引でも十分に利益が出る仕組みになっています。</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 第2章 -->
+    <div class="section">
+      <div class="section-label">📅 第2章｜02 TIMING</div>
+      <h2>⏰ 稼げる期間は9月〜12月末の3〜4ヶ月</h2>
+      <p class="body-text">毎年の新型iPhone発売に合わせて稼げる期間があります。ただし<strong>年によって状況は大きく異なる</strong>ため、毎年同じように稼げる保証はありません。</p>
+
+      <div class="timeline">
+        <div class="tl-seg" style="background:#fef2f2;">
+          <div class="tl-month" style="color:#dc2626;">📅 9月</div>
+          <div class="tl-status" style="color:#7f1d1d;">新型発売<br>🏆 利益ピーク</div>
+        </div>
+        <div class="tl-seg" style="background:#fefce8;">
+          <div class="tl-month" style="color:#713f12;">📅 10〜11月</div>
+          <div class="tl-status" style="color:#713f12;">徐々に<br>利益が減少</div>
+        </div>
+        <div class="tl-seg" style="background:#f8fafc;">
+          <div class="tl-month" style="color:#475569;">📅 12月末</div>
+          <div class="tl-status" style="color:#475569;">基本的に<br>利益終了</div>
+        </div>
+      </div>
+
+      <div class="card-grid card-grid-2" style="margin-top:14px;">
+        <div class="card" style="background:#e0f2fe;border:2px solid #0369a1;">
+          <div style="font-size:12px;font-weight:700;color:#0369a1;margin-bottom:6px;">⚡ iPhone 17は異例の状況</div>
+          <p style="font-size:13px;color:#0c4a6e;line-height:1.7;">円安・メモリ高騰・AI買い替え需要・iPhone 18の延期噂が重なり、<strong>2025年4月現在も利益が出続けています</strong>。夏頃まで維持する可能性も。</p>
+        </div>
+        <div class="card bg-red-light">
+          <div style="font-size:12px;font-weight:700;color:#991b1b;margin-bottom:6px;">⚠️ iPhone 15は即終了の前例あり</div>
+          <p style="font-size:13px;color:#444;line-height:1.7;"><strong>発売直後に利益が出なくなった</strong>年もあります。毎年同じように稼げるとは限りません。常に最新情報を確認しながら動くことが重要です。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <div style="font-size:13px;font-weight:700;color:#334155;margin-bottom:8px;">📖 第1・2章 まとめ</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="font-size:13px;color:#0f172a;">✅ 仕組みは「<strong>定価購入→プレ値売却</strong>」のシンプル2ステップ</div>
+        <div style="font-size:13px;color:#0f172a;">✅ 日本のiPhoneが世界2位の安さ＋<strong>輸出消費税還付</strong>が買取屋の利益の源泉</div>
+        <div style="font-size:13px;color:#0f172a;">✅ 稼げる基本期間は<strong>9月〜12月末（3〜4ヶ月）</strong></div>
+        <div style="font-size:13px;color:#0f172a;">✅ iPhone 17は<strong>2025年4月現在も利益継続中</strong>（異例）</div>
+        <div style="font-size:13px;color:#dc2626;">⚠️ 毎年同じとは限らない。<strong>年ごとに差が大きい</strong>ことを理解しておく</div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #cbd5e1;text-align:right;font-size:12px;color:#888;">✍️ やっぴー（<a href="https://twitter.com/8p_thankyou" style="color:#888;">@8p_thankyou</a>）</div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+  ページ②  第3章「Apple Storeでの買い方」
+====================================================== -->
+<div class="page theme-blue">
+  <div class="page-header">
+    <span class="badge">🛒 第3章｜03 HOW TO BUY</span>
+    <h1 class="page-title">Apple Storeでの<br>正しい買い方完全解説</h1>
+    <p class="page-subtitle">📱 選択するのは主に4項目。あとは必須設定を選ぶだけです。ここを間違えると利益が激減するので、一つひとつ丁寧に確認しましょう。</p>
+  </div>
+  <div class="page-content">
+
+    <!-- モデル -->
+    <div class="section">
+      <div class="section-label">🔵 選択①｜モデル</div>
+      <h2>📱 モデルはPro Max vs Pro どちらを選ぶ？</h2>
+
+      <div class="card-grid card-grid-2">
+        <div class="card featured" style="text-align:center;padding:20px 16px;">
+          <div style="font-size:11px;font-weight:700;color:#1e3a5f;margin-bottom:8px;">🏆 買取額が高い</div>
+          <div style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:8px;">Pro Max</div>
+          <div style="font-size:12px;color:#555;line-height:1.7;">買取額が高い傾向がありますが<strong>ライバルも多い</strong>です。到着までの日数もモデルによって変わります。</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px 16px;">
+          <div style="font-size:11px;font-weight:700;color:#1e3a5f;margin-bottom:8px;">💡 ライバルが少なめ</div>
+          <div style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:8px;">Pro</div>
+          <div style="font-size:12px;color:#555;line-height:1.7;">ライバルが少なく<strong>早く届く可能性</strong>あり。利益はPro Maxより少し低め。</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- カラー -->
+    <div class="section">
+      <div class="section-label">🔵 選択②｜カラー</div>
+      <h2>🎨 カラーは買取額に差が出る</h2>
+
+      <div class="flow-row">
+        <div class="flow-box" style="background:#dbeafe;border:2px solid #2563a8;">
+          <div class="fl-label" style="color:#2563a8;">🥇 買取額 最高</div>
+          <div class="fl-val" style="color:#1e3a5f;">⬜ シルバー</div>
+        </div>
+        <span class="flow-arrow" style="font-size:16px;font-weight:700;">＞</span>
+        <div class="flow-box">
+          <div class="fl-label">🥈 次点</div>
+          <div class="fl-val">🔵 ブルー</div>
+        </div>
+        <span class="flow-arrow" style="font-size:16px;font-weight:700;">＞</span>
+        <div class="flow-box">
+          <div class="fl-label">🥉 3番手</div>
+          <div class="fl-val">🟠 オレンジ</div>
+        </div>
+      </div>
+
+      <div class="card bg-yellow-light">
+        ⚠️ シルバーは買取額が高い分<strong>ライバルも多く、到着が遅れる場合があります</strong>。早く動きたい場合はブルーやオレンジも十分な選択肢です。
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 容量 -->
+    <div class="section">
+      <div class="section-label">🔵 選択③｜容量</div>
+      <h2>💾 容量選びで利益が変わる</h2>
+
+      <div class="card-grid card-grid-3">
+        <div class="card" style="text-align:center;padding:18px 12px;background:#dcfce7;border:2px solid #16a34a;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">🔰 初心者向け</div>
+          <div style="font-size:24px;font-weight:700;color:#0f172a;">256GB</div>
+          <div style="font-size:11px;color:#555;margin-top:6px;">迷ったらコレ<br>需要が最も安定</div>
+        </div>
+        <div class="card" style="text-align:center;padding:18px 12px;">
+          <div style="font-size:11px;font-weight:700;color:#2563a8;margin-bottom:6px;">💡 早く届く可能性</div>
+          <div style="font-size:24px;font-weight:700;color:#0f172a;">512GB</div>
+          <div style="font-size:11px;color:#555;margin-top:6px;">ライバルが<br>256GBより少なめ</div>
+        </div>
+        <div class="card" style="text-align:center;padding:18px 12px;">
+          <div style="font-size:11px;font-weight:700;color:#2563a8;margin-bottom:6px;">💡 穴場の可能性</div>
+          <div style="font-size:24px;font-weight:700;color:#0f172a;">1TB</div>
+          <div style="font-size:11px;color:#555;margin-top:6px;">ライバルが最少<br>利益率も高め</div>
+        </div>
+      </div>
+
+      <div class="card bg-red-light" style="margin-top:4px;text-align:center;">
+        🚨 <strong>2TBは利益が出ません。絶対に選ばないでください。</strong>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 受取方法 -->
+    <div class="section">
+      <div class="section-label">🔵 選択④｜受取方法</div>
+      <h2>📦 受取方法は「配送」か「ピックアップ」</h2>
+
+      <div class="card-grid card-grid-2">
+        <div class="card featured" style="text-align:center;padding:20px;">
+          <div style="font-size:11px;font-weight:700;color:#1e3a5f;margin-bottom:6px;">🔰 初心者は必ずこちらから</div>
+          <div style="font-size:20px;margin-bottom:6px;">🚚</div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:6px;">配送</div>
+          <div style="font-size:12px;color:#555;">自宅に届くので楽。まずはここから始めましょう。</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px;">
+          <div style="font-size:11px;font-weight:700;color:#1e3a5f;margin-bottom:6px;">⚡ 慣れてきたら挑戦</div>
+          <div style="font-size:20px;margin-bottom:6px;">🏪</div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:6px;">ピックアップ（店舗受取）</div>
+          <div style="font-size:12px;color:#555;">配送より早い場合あり。<strong>在庫がある時のみ可能</strong>。詳細は第6章で解説。</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 必須設定 -->
+    <div class="section">
+      <div class="section-label">🔵 必須設定 4点</div>
+      <h2>⚙️ これを間違えると利益が大幅に削られる</h2>
+      <p class="body-text">注文時に必ず以下の設定にしてください。<strong>1点でも間違えると利益が激減</strong>します。</p>
+
+      <div class="card-grid card-grid-4">
+        <div class="card" style="background:#dcfce7;border:2px solid #16a34a;text-align:center;padding:18px 8px;">
+          <div style="font-size:24px;margin-bottom:8px;">🚫</div>
+          <div style="font-size:12px;font-weight:700;color:#14532d;">下取り</div>
+          <div style="font-size:16px;font-weight:700;color:#14532d;">なし</div>
+        </div>
+        <div class="card" style="background:#dcfce7;border:2px solid #16a34a;text-align:center;padding:18px 8px;">
+          <div style="font-size:24px;margin-bottom:8px;">📡</div>
+          <div style="font-size:12px;font-weight:700;color:#14532d;">SIM</div>
+          <div style="font-size:16px;font-weight:700;color:#14532d;">フリー</div>
+        </div>
+        <div class="card" style="background:#dcfce7;border:2px solid #16a34a;text-align:center;padding:18px 8px;">
+          <div style="font-size:24px;margin-bottom:8px;">💳</div>
+          <div style="font-size:12px;font-weight:700;color:#14532d;">支払い</div>
+          <div style="font-size:16px;font-weight:700;color:#14532d;">一括払い</div>
+        </div>
+        <div class="card" style="background:#dcfce7;border:2px solid #16a34a;text-align:center;padding:18px 8px;">
+          <div style="font-size:24px;margin-bottom:8px;">🛡️</div>
+          <div style="font-size:12px;font-weight:700;color:#14532d;">保証</div>
+          <div style="font-size:16px;font-weight:700;color:#14532d;">なし</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <div style="font-size:13px;font-weight:700;color:#2563a8;margin-bottom:8px;">🛒 第3章 まとめ</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="font-size:13px;color:#1e3a5f;">✅ モデルは<strong>Pro Maxが買取額高め</strong>（ただしライバルも多い）</div>
+        <div style="font-size:13px;color:#1e3a5f;">✅ カラーは<strong>シルバー ＞ ブルー ＞ オレンジ</strong>の順で買取額が高い</div>
+        <div style="font-size:13px;color:#1e3a5f;">✅ 容量は初心者なら<strong>256GBが無難</strong>。2TBは絶対NG</div>
+        <div style="font-size:13px;color:#1e3a5f;">✅ 受取は初心者なら<strong>まず配送から</strong></div>
+        <div style="font-size:13px;color:#1e3a5f;">✅ 必須設定：<strong>下取りなし・SIMフリー・一括払い・保証なし</strong>の4点セット</div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #bfdbfe;text-align:right;font-size:12px;color:#888;">✍️ やっぴー（<a href="https://twitter.com/8p_thankyou" style="color:#888;">@8p_thankyou</a>）</div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+  ページ③  第4章「大量購入のコツ」＋ 第5章「島流し対策」
+====================================================== -->
+<div class="page theme-orange">
+  <div class="page-header">
+    <span class="badge">📦 第4・5章｜大量購入 & 島流し対策</span>
+    <h1 class="page-title">大量購入のコツ ＆<br>島流し対策4項目</h1>
+    <p class="page-subtitle">🛡️「一般購入者っぽく見せる」ことが最重要です。Appleが見ている4つの情報をすべてずらして、島流し（配送遅延）を徹底的に防ぎましょう。</p>
+  </div>
+  <div class="page-content">
+
+    <!-- 第4章 業界用語 -->
+    <div class="section">
+      <div class="section-label">🟠 第4章｜04 ADVANCED — まず2つの用語を覚える</div>
+      <h2>📖 「ごちゅあり」と「島流し」とは？</h2>
+
+      <div class="card-grid card-grid-2">
+        <div class="card featured">
+          <div style="font-size:24px;margin-bottom:10px;">📧</div>
+          <div style="font-size:15px;font-weight:700;margin-bottom:6px;">ごちゅあり</div>
+          <p style="font-size:13px;color:#555;line-height:1.7;"><strong>「ご注文ありがとうございます」メール</strong>の略称。届いたら注文確定で数日後に発送予定になります。<br>ただし過去に<strong>ごちゅあり後キャンセル</strong>もあった経緯があるため過信は禁物です。</p>
+        </div>
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:10px;">🏝️</div>
+          <div style="font-size:15px;font-weight:700;margin-bottom:6px;">島流し</div>
+          <p style="font-size:13px;color:#555;line-height:1.7;"><strong>配送予定日を後ろ倒しにされること</strong>。転売ヤーと認定されると島流しされやすくなります。大量注文・同じ情報の使い回しが主な原因です。</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 決済の注意点 -->
+    <div class="section">
+      <div class="section-label">🟠 決済の注意点【超重要】</div>
+      <h2>💳 デビットカードは絶対NG！クレジットカード一択</h2>
+      <p class="body-text">決済の仕組みを正しく理解していないと、キャッシュフローが破綻します。</p>
+
+      <div class="card featured" style="padding:20px 24px;margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:#7c2d12;margin-bottom:12px;">▼ 決済の流れを理解しよう</div>
+        <div class="flow-row">
+          <div class="flow-box">
+            <div class="fl-label">注文時</div>
+            <div class="fl-val">利用枠が<br>「仮押さえ」</div>
+          </div>
+          <span class="flow-arrow">➡</span>
+          <div class="flow-box">
+            <div class="fl-label">発送前</div>
+            <div class="fl-val">実際の<br>引き落とし</div>
+          </div>
+          <span class="flow-arrow">➡</span>
+          <div class="flow-box" style="background:#ffedd5;border:2px solid #ea580c;">
+            <div class="fl-label" style="color:#ea580c;">島流し時</div>
+            <div class="fl-val" style="color:#7c2d12;">枠が<br>再確保される</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid card-grid-2">
+        <div class="card bg-green-light">
+          <div style="font-size:12px;font-weight:700;color:#15803d;margin-bottom:8px;">✅ クレジットカード → 安全</div>
+          <p style="font-size:13px;color:#444;line-height:1.7;">実際の引き落としは<strong>1回のみ</strong>。仮押さえは枠確保なので、島流しで支払いが間に合わなくなる事態は基本起きません。</p>
+        </div>
+        <div class="card bg-red-light">
+          <div style="font-size:12px;font-weight:700;color:#991b1b;margin-bottom:8px;">❌ デビットカード → 絶対NG</div>
+          <p style="font-size:13px;color:#444;line-height:1.7;">注文時と再確保で<strong>口座から倍額が引かれ</strong>、返金まで1〜2ヶ月。キャッシュフローが破綻します。<strong>初心者は絶対に使わないでください。</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 第5章 島流し対策 -->
+    <div class="section">
+      <div class="section-label">🟠 第5章｜05 FAST TRACK — 島流し対策4項目</div>
+      <h2>🛡️ Appleが監視している4情報をすべて変える</h2>
+
+      <div class="card" style="background:#7c2d12;color:#fff;padding:16px 20px;margin-bottom:16px;">
+        <div style="font-size:12px;font-weight:700;color:#fdba74;margin-bottom:6px;">⭐ Appleが同一かどうかチェックしている4つの情報</div>
+        <div style="font-size:16px;font-weight:700;letter-spacing:0.05em;">名前 ／ 住所 ／ 電話番号 ／ クレジットカード</div>
+        <div style="font-size:12px;color:#fed7aa;margin-top:6px;">これらが同一だと「転売ヤー認定」 → 島流し確定</div>
+      </div>
+
+      <div class="taisaku-card" style="border-color:#ea580c;background:#fff7ed;">
+        <div style="font-size:13px;font-weight:700;color:#7c2d12;margin-bottom:10px;">🏠 対策① 名前と住所は毎回表記を変える</div>
+        <p style="font-size:13px;color:#444;line-height:1.8;">漢字・カタカナ・ひらがな・ローマ字・記号を使い分けて<strong>別人に見せる手法</strong>です。</p>
+        <div style="margin-top:10px;background:#fff;border-radius:8px;padding:10px 14px;font-size:12px;color:#444;line-height:2.0;">
+          例）山田花子　大阪市北区梅田1-1-1<br>
+          　　やまだはなこ　大阪市北区梅田1の1の1<br>
+          　　Yamada Hanako　大阪市北区梅田1丁目1番地1号
+        </div>
+        <div style="margin-top:8px;padding:6px 12px;background:#fee2e2;border-radius:6px;font-size:12px;font-weight:700;color:#991b1b;display:inline-block;">
+          🚨 偽名・偽住所は絶対禁止！税務調査で経費計上不可・最悪詐〇罪のリスクあり
+        </div>
+      </div>
+
+      <div class="taisaku-card" style="border-color:#ea580c;background:#fff7ed;">
+        <div style="font-size:13px;font-weight:700;color:#7c2d12;margin-bottom:8px;">📱 対策② 電話番号はMNPで取得した番号を使う</div>
+        <p style="font-size:13px;color:#444;line-height:1.7;">別資料で解説しているMNPで取得した番号を活用するのが基本です。新たに格安SIMを契約するよりも<strong>すでに保有している番号を使う方が効率的</strong>です。</p>
+      </div>
+
+      <div class="taisaku-card" style="border-color:#ea580c;background:#fff7ed;">
+        <div style="font-size:13px;font-weight:700;color:#7c2d12;margin-bottom:8px;">💳 対策③ クレジットカードを月1〜2枚ペースで増やす</div>
+        <p style="font-size:13px;color:#444;line-height:1.7;">短期間に大量作成すると審査に通りにくくなるため<strong>月に1〜2枚のペース</strong>で増やしてください。Apple Payに登録するとカード番号が変わるため有効です。</p>
+        <div style="margin-top:10px;background:#fff;border-radius:8px;padding:10px 14px;font-size:12px;color:#444;line-height:1.7;">
+          💳 <strong>おすすめカード：セゾンプラチナビジネスアメックス</strong><br>
+          枠が1,000万円まで増えやすく、返金も数日で枠が復活。iPhone転売者の定番カードです。
+        </div>
+      </div>
+
+      <div class="taisaku-card" style="border-color:#ea580c;background:#fff7ed;">
+        <div style="font-size:13px;font-weight:700;color:#7c2d12;margin-bottom:8px;">🕶️ 対策④ プライベートモード（シークレットモード）で注文する</div>
+        <p style="font-size:13px;color:#444;line-height:1.7;">Cookie・閲覧履歴・キャッシュといった「足跡」を消します。iPhoneなら<strong>「プライベートモード」</strong>、Androidなら<strong>「シークレットモード」</strong>で注文してください。</p>
+      </div>
+
+      <div class="card bg-yellow-light" style="margin-top:14px;">
+        <div style="font-size:13px;font-weight:700;color:#713f12;margin-bottom:8px;">📋 注文個数の目安</div>
+        <div style="font-size:13px;color:#444;line-height:1.9;">
+          🔒 セキュリティが厳しい時期：<strong>1個からスタート</strong><br>
+          ✅ ごちゅありが届いたら：<strong>追加で1個試してみる</strong><br>
+          🚨 初心者が10個一気に注文：<strong>ほぼ島流し確定。絶対にやらないこと</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <div style="font-size:13px;font-weight:700;color:#ea580c;margin-bottom:8px;">📦 第4・5章 まとめ</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="font-size:13px;color:#7c2d12;">✅ 「ごちゅあり」＝注文確定メール。<strong>過信は禁物</strong></div>
+        <div style="font-size:13px;color:#7c2d12;">✅ 「島流し」＝転売ヤー認定で<strong>配送が後ろ倒し</strong>にされること</div>
+        <div style="font-size:13px;color:#dc2626;">🚨 <strong>デビットカードは絶対NG</strong>！倍額引き落としでキャッシュフロー破綻</div>
+        <div style="font-size:13px;color:#7c2d12;">✅ 4情報（名前・住所・電話・カード）を<strong>毎回変えて一般人に見せる</strong></div>
+        <div style="font-size:13px;color:#7c2d12;">✅ 注文は<strong>1個からスタート</strong>→ごちゅあり確認後1個追加が鉄板</div>
+        <div style="font-size:13px;color:#dc2626;">🚨 <strong>10個一気はほぼ島流し確定</strong>！初心者は絶対やらないこと</div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #fed7aa;text-align:right;font-size:12px;color:#888;">✍️ やっぴー（<a href="https://twitter.com/8p_thankyou" style="color:#888;">@8p_thankyou</a>）</div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+  ページ④  第6章「ピックアップ」＋ 第7章「買取屋」
+====================================================== -->
+<div class="page theme-green">
+  <div class="page-header">
+    <span class="badge">🏪 第6・7章｜ピックアップ & 買取屋</span>
+    <h1 class="page-title">店舗受取（ピック）攻略 ＆<br>絶対に使うべき買取屋3選</h1>
+    <p class="page-subtitle">⚡ 配送より早く手に入るピックアップの攻略法と、鉄板の買取屋3社・絶対に近づいてはいけない危険な買取屋を完全解説します。</p>
+  </div>
+  <div class="page-content">
+
+    <!-- ピックアップ -->
+    <div class="section">
+      <div class="section-label">🟢 第6章｜06 PICKUP</div>
+      <h2>🏪 店舗受取（ピックアップ）の攻略手順</h2>
+      <p class="body-text">店舗在庫がある時のみ使える受取方法です。<strong>朝7〜10時に在庫が復活することが多い</strong>ので、この時間帯を狙いましょう。</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">📱 機種を選択すると在庫のある近くの店舗が表示される</div>
+            <div class="step-desc">Apple Storeアプリ/サイトで機種を選ぶだけで、在庫がある近隣店舗が自動で表示されます。ストアの変更も可能です。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">🛒 決済画面で「ピックアップ（受取）」を選択する</div>
+            <div class="step-desc">最も在庫のある店舗を選びましょう。ストア変更も決済画面からできます。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">🔔 X（旧Twitter）でピックアップ通知アカウントをフォロー</div>
+            <div class="step-desc">「ピックアップ通知アカウント」を検索してフォローすると、在庫復活のタイミングをリアルタイムで把握できます。<strong>関東から順次西に在庫が復活する</strong>傾向があります。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid card-grid-2" style="margin-top:14px;">
+        <div class="card bg-red-light">
+          <div style="font-size:12px;font-weight:700;color:#991b1b;margin-bottom:6px;">⚠️「電子」に注意</div>
+          <p style="font-size:13px;color:#444;line-height:1.7;">Appleから「店舗受取は不可、郵送に切り替えます」のメールが来ることを「電子」と呼びます。<strong>大量購入アカウントはiPhone 17でこれになりやすい</strong>です。</p>
+        </div>
+        <div class="card bg-green-light">
+          <div style="font-size:12px;font-weight:700;color:#15803d;margin-bottom:6px;">💡 クリーンアカウントが有利</div>
+          <p style="font-size:13px;color:#444;line-height:1.7;"><strong>まだ一度も買ったことがない方はピックアップで取れる可能性が高い</strong>です。ぜひ積極的に挑戦してみてください。</p>
+        </div>
+      </div>
+
+      <div class="card bg-yellow-light">
+        📦 <strong>コンビニ受取は「ピック」ではなく「郵送」扱い</strong>です。混同しないよう注意してください。
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 買取屋 TOP3 -->
+    <div class="section">
+      <div class="section-label">🟢 第7章｜07 BUYER — 使うべき買取屋 TOP3</div>
+      <h2>🏆 大手・振込が早い3社が鉄板</h2>
+      <p class="body-text">結論：<strong>大手で振込が早いところを選んでください</strong>。最もキャッシュフローが良いのは<strong>当日現金で受け取れる店頭買取</strong>です。</p>
+
+      <div class="rank-item" style="background:#dcfce7;border:2px solid #16a34a;">
+        <div class="rank-badge" style="background:#16a34a;color:#fff;">1</div>
+        <div class="rank-content">
+          <div class="rank-title">🏆 買取一丁目【最大手・安定感No.1】</div>
+          <div class="rank-desc">買取屋の最大手として知られています。<strong>安定した買取価格</strong>が最大の魅力で、初めての方でも安心して利用できます。まず1社目はここから試してみてください。</div>
+        </div>
+      </div>
+
+      <div class="rank-item" style="background:#f0fdf4;border:1px solid #bbf7d0;">
+        <div class="rank-badge" style="background:#0d9488;color:#fff;">2</div>
+        <div class="rank-content">
+          <div class="rank-title">💰 買取ソムリエ【iPhone買取額が特に高い】</div>
+          <div class="rank-desc">iPhoneの買取額が他社より高いのが特徴ですが、<strong>継続しての買取はできません</strong>。単発で使うスタイルになります。利益を最大化したい時に活用しましょう。</div>
+        </div>
+      </div>
+
+      <div class="rank-item" style="background:#f0fdf4;border:1px solid #bbf7d0;">
+        <div class="rank-badge" style="background:#059669;color:#fff;">3</div>
+        <div class="rank-content">
+          <div class="rank-title">⚡ 買取商店【入金スピードが速く今年は買取も高め】</div>
+          <div class="rank-desc">入金スピードが速く、今年は買取額も高めです。検品はやや厳しめですが、iPhoneは傷がつきにくいため基本的に問題ありません。</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 危険な買取屋 -->
+    <div class="section">
+      <div class="section-label">🟢 絶対に近づいてはいけない買取屋</div>
+      <h2>🚨 この2タイプは人生が終わるリスクあり</h2>
+
+      <div class="danger-card" style="background:#7f1d1d;color:#fff;">
+        <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;">
+          <div style="font-size:28px;flex-shrink:0;">❌</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;margin-bottom:6px;">タイプ①｜オプチャ・サロン限定の買取屋</div>
+            <p style="font-size:13px;color:#fecaca;line-height:1.7;">クローズドなコミュニティだけで営業している買取屋は要注意です。<strong>ポンジスキームの可能性が非常に高い</strong>ため、条件が良くても絶対に近づかないでください。</p>
+          </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.2);padding-top:14px;display:flex;gap:14px;align-items:flex-start;">
+          <div style="font-size:28px;flex-shrink:0;">❌</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;margin-bottom:6px;">タイプ②｜新規参入で異常に高い買取屋</div>
+            <p style="font-size:13px;color:#fecaca;line-height:1.7;">他社より数千円高い・定価以下なのに定価買取・<strong>振込が1ヶ月後</strong>など、条件が異常な業者は飛ぶ可能性が高いです。知人の中には<strong>数百万〜数千万円飛ばされた方</strong>もいます。<strong>数十台を持ち込むと人生が終わるレベルの損失</strong>になります。絶対に使わないでください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <div style="font-size:13px;font-weight:700;color:#16a34a;margin-bottom:8px;">🏪 第6・7章 まとめ</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="font-size:13px;color:#14532d;">✅ ピックアップは<strong>朝7〜10時が在庫復活のゴールデンタイム</strong></div>
+        <div style="font-size:13px;color:#14532d;">✅ <strong>X（旧Twitter）のピック通知アカウント</strong>をフォローして在庫を即把握</div>
+        <div style="font-size:13px;color:#14532d;">✅ <strong>クリーンなアカウント（初購入の方）</strong>がピックで取れやすい</div>
+        <div style="font-size:13px;color:#14532d;">✅ 買取は<strong>大手3社（買取一丁目・買取ソムリエ・買取商店）</strong>が鉄板</div>
+        <div style="font-size:13px;color:#14532d;">✅ キャッシュフロー最優先なら<strong>店頭現金買取</strong>を選ぶ</div>
+        <div style="font-size:13px;color:#dc2626;">🚨 オプチャ限定・新規高額業者には<strong>絶対に近づかない</strong>。数十台持ち込みで人生終了リスクあり</div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #bbf7d0;text-align:right;font-size:12px;color:#888;">✍️ やっぴー（<a href="https://twitter.com/8p_thankyou" style="color:#888;">@8p_thankyou</a>）</div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =====================================================
+  ページ⑤  第8章「リスクと落とし穴」＋ 全体まとめ
+====================================================== -->
+<div class="page theme-gold">
+  <div class="page-header">
+    <span class="badge">⚠️ 第8章｜リスクと正しいスタンス & 全体まとめ</span>
+    <h1 class="page-title">リスクと落とし穴 ＆<br>正しいスタンスで稼ぐ</h1>
+    <p class="page-subtitle">🎓 良い話だけではありません。リスクを正しく理解して、長く稼ぎ続けられる副業家のスタンスを身につけましょう。</p>
+  </div>
+  <div class="page-content">
+
+    <!-- 4つのリスク -->
+    <div class="section">
+      <div class="section-label">🟡 第8章｜08 RISK — 必ず理解しておく4つの落とし穴</div>
+      <h2>⚠️ これを知らずに突っ込むと痛い目を見る</h2>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num" style="background:#dc2626;">1</div>
+          <div class="step-content">
+            <div class="step-title">📅 稼げる期間はまったく読めない</div>
+            <div class="step-desc">iPhone 15は<strong>発売直後に利益が消えました</strong>。年によって稼げる期間と金額は大きく異なります。「今年稼げた＝来年も同じ」は危険な思い込みです。常に最新情報を確認しながら動くことが必須です。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:#dc2626;">2</div>
+          <div class="step-content">
+            <div class="step-title">📈 定価が大幅に上がるリスクがある</div>
+            <div class="step-desc">現在の日本価格はドル円相場より安く設定されています。円安が是正されるか適正価格に調整されれば<strong>定価が大幅に上昇して利益が消える</strong>可能性があります。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:#dc2626;">3</div>
+          <div class="step-content">
+            <div class="step-title">💳 返品でも一時的に現金が必要になる</div>
+            <div class="step-desc">2週間以内なら無料返品が可能ですが、<strong>クレカの締め日の関係で一度支払いが発生する場合</strong>があります。返金までの間に一時的な現金が必要になるため、枠ギリギリで回すと他の支払いが止まるリスクがあります。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:#dc2626;">4</div>
+          <div class="step-content">
+            <div class="step-title">🏃 買取屋が突然消える（飛ぶ）リスク</div>
+            <div class="step-desc">ポンジスキーム系の買取屋が飛ぶ事件は<strong>日常的に発生しています</strong>。「自分は大丈夫」と思っている人ほど引っかかりやすいのが実情です。<strong>大手3社以外は使わないことが最大の防御</strong>です。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 正しいスタンス -->
+    <div class="section">
+      <div class="section-label">🟡 推奨スタンス</div>
+      <h2>🎯 iPhone転売との正しい向き合い方</h2>
+
+      <div class="card featured" style="text-align:center;padding:28px 20px;">
+        <div style="font-size:36px;margin-bottom:12px;">🎁</div>
+        <div style="font-size:22px;font-weight:700;color:#451a03;margin-bottom:10px;">iPhone転売は<br>「ボーナス」と割り切る</div>
+        <p style="font-size:14px;color:#555;line-height:1.8;">メインは<strong>他のせどりや転売手法</strong>で安定的な利益を確保し、iPhone転売はあくまで<strong>上乗せ分として活用</strong>するのが正しいスタンスです。これが副業で長く稼ぎ続けられる考え方です。</p>
+      </div>
+
+      <div class="card-grid card-grid-2" style="margin-top:14px;">
+        <div class="card bg-red-light">
+          <div style="font-size:12px;font-weight:700;color:#991b1b;margin-bottom:8px;">❌ やりがちなNG思考</div>
+          <div style="font-size:13px;color:#444;line-height:1.9;">「今年稼げた→来年も同じ」<br>「1台2万円→100台で200万円！」<br>「新しい買取屋が高い→全台持込もう」</div>
+        </div>
+        <div class="card bg-green-light">
+          <div style="font-size:12px;font-weight:700;color:#15803d;margin-bottom:8px;">✅ 正しいスタンス</div>
+          <div style="font-size:13px;color:#444;line-height:1.9;">メインの収入源を別に持つ<br>大手3社の買取屋だけを使い続ける<br>1シーズンで取れる分だけ取る</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 全体まとめ -->
+    <div class="section">
+      <div class="section-label">🟡 全8章 一気に振り返る</div>
+      <h2>📋 このガイドで学んだことすべて</h2>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">01</div>
+          <div class="step-content">
+            <div class="step-title">🍎 仕組み：Apple Store定価購入 → 買取屋プレ値売却で1台+2万円</div>
+            <div class="step-desc">日本が世界2位の安さ＋輸出消費税還付が買取屋の利益の源泉。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">02</div>
+          <div class="step-content">
+            <div class="step-title">📅 期間：9月〜12月末が基本（iPhone 17は2025年4月現在も継続中）</div>
+            <div class="step-desc">年によって大きく異なる。毎年同じとは限らない。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">03</div>
+          <div class="step-content">
+            <div class="step-title">🛒 買い方：Pro Max / 256GB / シルバー / 配送からスタート</div>
+            <div class="step-desc">必須設定は「下取りなし・SIMフリー・一括払い・保証なし」の4点セット。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">04</div>
+          <div class="step-content">
+            <div class="step-title">💳 決済：クレジットカード一択。デビットカードは初心者絶対NG</div>
+            <div class="step-desc">島流し時の倍額引き落としでキャッシュフロー破綻リスク大。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">05</div>
+          <div class="step-content">
+            <div class="step-title">🛡️ 対策：4情報を毎回変えて「一般購入者」に見せる</div>
+            <div class="step-desc">名前・住所・電話・カードをずらして島流し回避。注文は1個からが鉄板。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">06</div>
+          <div class="step-content">
+            <div class="step-title">🏪 ピック：朝7〜10時が在庫復活のゴールデンタイム</div>
+            <div class="step-desc">ピック通知アカウントをフォロー。クリーンなアカウントが有利。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">07</div>
+          <div class="step-content">
+            <div class="step-title">🏦 買取：大手3社（買取一丁目・買取ソムリエ・買取商店）一択</div>
+            <div class="step-desc">オプチャ限定・新規高額業者には絶対に近づかない。</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="font-size:10px;">08</div>
+          <div class="step-content">
+            <div class="step-title">🎁 スタンス：iPhone転売はボーナス。メインを別に確保する</div>
+            <div class="step-desc">リスクと不確実性を理解した上で取り組む。継続して稼ぐ副業家の考え方。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <div style="font-size:13px;font-weight:700;color:#b45309;margin-bottom:10px;">🍎 iPhone転売 完全ガイド 総まとめ</div>
+      <div style="text-align:center;padding:18px;background:rgba(255,255,255,0.5);border-radius:12px;margin-bottom:16px;">
+        <div style="font-size:22px;font-weight:700;color:#451a03;line-height:1.6;">ボーナスと割り切って<br>メイン手法と組み合わせる</div>
+        <div style="font-size:13px;color:#555;margin-top:8px;">1シーズンで年収級も狙えますが、<br><strong>リスクと不確実性を理解した上で取り組むこと</strong></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <div style="font-size:13px;color:#451a03;">✅ 1台あたり<strong>+2万円前後の利益</strong>が狙える（iPhone 17 Pro Max 256GB例）</div>
+        <div style="font-size:13px;color:#451a03;">✅ 稼げる期間は基本<strong>9月〜12月末</strong>の3〜4ヶ月</div>
+        <div style="font-size:13px;color:#451a03;">✅ 初心者は<strong>Pro Max・256GB・シルバー・配送</strong>から始める</div>
+        <div style="font-size:13px;color:#451a03;">✅ 必須設定は<strong>下取りなし・SIMフリー・一括・保証なし</strong>の4点</div>
+        <div style="font-size:13px;color:#451a03;">✅ 買取は<strong>大手3社のみ</strong>。怪しい業者には絶対近づかない</div>
+        <div style="font-size:13px;color:#dc2626;">🚨 <strong>デビットカード・偽名住所・怪しい買取屋</strong>は絶対NG</div>
+        <div style="font-size:13px;color:#451a03;">🎁 iPhone転売は<strong>「ボーナス」扱い</strong>。メインを別に確保することが継続の鍵</div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px dashed #fde68a;text-align:right;font-size:12px;color:#888;">✍️ やっぴー（<a href="https://twitter.com/8p_thankyou" style="color:#888;">@8p_thankyou</a>）</div>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
